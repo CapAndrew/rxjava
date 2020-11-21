@@ -11,6 +11,7 @@ import io.reactivex.Flowable
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers.io
 import kotlinx.android.synthetic.main.main_fragment.*
+import java.util.*
 import java.util.concurrent.TimeUnit
 
 class MainFragment : Fragment() {
@@ -58,7 +59,12 @@ class MainFragment : Fragment() {
                         }
                         .subscribe({ words ->
                             words.forEach { word ->
-                                if (word.toLowerCase().contains(p0.toString().toLowerCase())) {
+                                if (word.toLowerCase(Locale.ROOT).contains(
+                                        p0.toString().toLowerCase(
+                                            Locale.ROOT
+                                        )
+                                    )
+                                ) {
                                     matchCount.text = (++countOfFound).toString()
                                     isTextFound = true
                                 }

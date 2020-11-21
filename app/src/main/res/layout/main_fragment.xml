@@ -5,47 +5,17 @@
     android:layout_height="match_parent">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/searchBar"
+    <EditText
+        android:id="@+id/searchLine"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/enter_symbols_to_search_in_text"
+        android:singleLine="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <EditText
-            android:id="@+id/searchLine"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:hint="@string/enter_symbols_to_search_in_text"
-            android:singleLine="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/previousButton"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/previousButton"
-            android:layout_width="30dp"
-            android:layout_height="match_parent"
-            android:text="@string/previous"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/nextButton"
-            app:layout_constraintStart_toEndOf="@+id/searchLine"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/nextButton"
-            android:layout_width="30dp"
-            android:layout_height="match_parent"
-            android:text="@string/next"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/previousButton"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/matchCount"/>
 
 
     <TextView
@@ -55,7 +25,7 @@
         app:layout_constraintBottom_toTopOf="@id/scrollView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchBar" />
+        app:layout_constraintTop_toBottomOf="@+id/searchLine" />
 
     <ScrollView
         android:id="@+id/scrollView"
