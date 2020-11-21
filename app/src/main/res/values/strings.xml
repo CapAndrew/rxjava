@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">rxjava</string>
+    <string name="enter_symbols_to_search_in_text">Enter symbols to search in text</string>
+    <string name="no_matches_found">No matches found</string>
+    <string name="previous"><![CDATA[<]]></string>
+    <string name="next"><![CDATA[>]]></string>
+</resources>
